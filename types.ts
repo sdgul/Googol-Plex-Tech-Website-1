@@ -21,10 +21,21 @@ export interface Project {
   imageUrl: string;
 }
 
+export interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  author: string;
+  category: string;
+  imageUrl: string;
+}
+
 export enum Page {
   HOME = 'HOME',
   ABOUT = 'ABOUT',
   SERVICES = 'SERVICES',
   PORTFOLIO = 'PORTFOLIO',
+  BLOG = 'BLOG',
   CONTACT = 'CONTACT'
 }
