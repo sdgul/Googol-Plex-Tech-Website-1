@@ -1,9 +1,9 @@
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
 export const getAutomationAdvice = async (businessType: string, problem: string): Promise<string> => {
   try {
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    
     const prompt = `
       You are a senior automation consultant for "Googol Plex Tech", a software company.
       A potential client runs a "${businessType}" and is facing issues with "${problem}".
